@@ -1,0 +1,30 @@
+.main{
+    height: 200px;
+    width: 400px;
+    background-color: #cccccc;
+    margin: 100px auto;
+
+    position:relative;
+    overflow: hidden;
+}
+.top{
+    width:100px;
+    height:100px;
+    background-color: #fc0;
+    border-radius: 9999px;
+
+    position: absolute;
+    top: -50px;
+    left:-50px;
+}
+
+.bottom{
+    width:100px;
+    height:100px;
+    background-color: #fc0;
+    border-radius: 9999px;
+
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+}
