@@ -1,0 +1,398 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft YaHei","Adobe Fan Heiti Std",sans-serif;
+    font-weight: 300;
+}
+.container{
+    width:980px;
+    margin:0 auto;
+}
+.width{
+    width: 892px;
+    margin: 0 auto;
+}
+ul.leaders{
+    overflow-x: hidden;
+    list-style: none;
+}
+ul.leaders li:before{
+    float:left;
+    width:0;
+    white-space: nowrap;
+    content:
+    "............................"
+    "............................"
+    "............................"
+    "............................"
+    "............................"
+    "............................"
+    "............................"
+    "............................"
+    "............................"
+    "............................"
+    "............................"
+    "............................"
+    "............................";
+    font-size: 10px;
+}
+ul.leaders span:first-child{
+    padding-right: 0.33em;
+    background:white;
+}
+ul.leaders span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: white;
+}
+
+header .header{
+    border-bottom: 2px solid #938e8c;
+    height: 61px;
+    line-height: 100px;
+    color: crimson;
+    font-family: "Adobe Fan Heiti Std",sans-serif;
+    text-align: right;
+}
+
+header .header > a{
+    float: left;
+    height: 61px;
+    width:110px;
+
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: crimson;
+}
+section{
+    padding-top:25px;
+}
+.banner{
+    overflow: hidden;
+    position: relative;
+}
+.banner .photo{
+    width: 641px;
+    height: 301px;
+    float: left;
+}
+.banner .photo .green,.banner .photo .pink{
+    width:191px;
+    height: 301px;
+}
+.banner .photo img{
+    width: 100%;
+}
+.banner article{
+    width:203px;
+    float: right;
+    border-top: 2px solid #cc8091;
+}
+.banner article h1{
+    text-transform:uppercase;
+    font-size:24px;
+    line-height: 0.5em;
+    height: 0.5em;
+    text-decoration: underline;
+    clear: both;
+}
+.banner article h1::first-letter{
+    font-size:xx-large;
+}
+.banner article p{
+    font-size:12px;
+    height: 2em;
+    line-height: 1em;
+    color: #676767;
+    font-style: italic;
+}
+.banner article .top-num{
+    font-size:116px;
+    color:#75b86b;
+    line-height: 0.8em;
+    font-style: italic;
+}
+.banner article .box{
+    color: #cc8091;
+    margin-top: -30px;
+}
+.banner article .box .word{
+    padding-top:2.8em;
+    text-indent: 5px;
+}
+.banner article .box .word span{
+    display: block;
+}
+.banner article .box label{
+    font-size:55px;
+    float: left;
+}
+.banner article .box .title{
+    font-size:21px;
+    line-height: 1em;
+}
+.banner article .box .describe{
+    font-size:12px;
+    line-height: 1em;
+}
+.category{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 45px;
+    width: 641px;
+}
+.category article:first-child{
+    padding-right: 20px;
+}
+.category article:last-child{
+    padding-left: 20px;
+}
+
+.category article header{
+    border: none;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #d2992f;
+    font-size:16px;
+    font-weight: bold;
+}
+.category article:first-child header{
+    color: green;
+}
+.category article:last-child header{
+    color: #cc7680;
+}
+.category article div{
+    font-size: 12px;
+    color:#231815;
+    margin-bottom: 16px;
+    opacity: 0.7;
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+}
+.category article ul.leaders span:last-child{
+    color: deeppink;
+}
+.group{
+    overflow: hidden;
+    display: flex;
+}
+.group .left {
+    width:415px;
+    position: relative;
+}
+.group .left header{
+    font-family: "Adobe Fan Heiti Std", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 2.2em;
+}
+.group .left header p span{
+    font-size:72px;
+    font-style: italic;
+    color: #f5e327;
+}
+.group .left header p:first-child{
+    margin-top: 0;
+    font-size: 33px;
+    color:#11456b;
+}
+.group .left header p:last-child{
+    font-size: 25px;
+    color:#11456b;
+    margin: -30px 0 10px 0;
+}
+.group .left article{
+    padding-top: 20px;
+    border-top: 2px solid;
+}
+.group .left article img{
+    float: right;
+    max-width: 200px;
+    max-height: 400px;
+    clear:right;
+    padding:20px 0 20px 20px;
+}
+.group .left article .content::first-letter{
+    font-size:70px;
+    color: #f5e327;
+    float: left;
+    padding: 5px;
+}
+.group .left article .content{
+    font-family: "宋体", sans-serif;
+}
+.group .right{
+    width: 458px;
+    margin-left: 19px;
+}
+.group .right .image{
+    position: relative;
+    width: 458px;
+    height: 275px;
+}
+.group .right .image img{
+    width: 100%;
+    height: 100%;
+}
+.group .right .image header{
+
+    height: 61px;
+    line-height: 61px;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    font-size:26px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.2) ;
+    filter:Alpha(opacity=50);/* 只支持IE6、7、8、9 */
+    *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+}
+.group .right .image header .title{
+    padding-left: 10px;
+    margin-left: 30px;
+    line-height: 44px;
+    height:44px;
+    border-left: 3px solid #72b16a;
+}
+.group .right .image header .title span{
+    color: green;
+    font-size:12px;
+    font-style: italic;
+    word-spacing:140%;
+}
+.group .right article{
+    background-color: antiquewhite;
+    padding:10px;
+    margin-top: 20px;
+}
+.group .right article ul{
+    padding-left: 0;
+    color:#515b5b;
+}
+.group .right article ul li{
+    margin-bottom: 20px;
+}
+.group .right article ul.leaders span:first-child{
+    background: antiquewhite;
+    padding-left: 5px;
+}
+.group .right article ul.leaders span:last-child{
+    font-size: 12px;
+    font-style: italic;
+}
+.group .right article ul.leaders span + span {
+
+    background: antiquewhite;
+}
+.group .right article ul li:before{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid black;
+    /*margin-top: 10px;*/
+    background: antiquewhite;
+}
+.group .right .red_block,.group .text{
+    /*display: inline;*/
+}
+.group .right .red_block{
+    background-color: palevioletred;
+    color: #ffffff;
+    margin-left: -10px;
+    margin-bottom: -10px;
+    width: 260px;
+    height: 160px;
+    /*position:relative;*/
+    float: left;
+}
+.group .right .red_block .zero{
+    line-height: 160px;
+    height: 160px;
+    font-size:110px;
+    width:24%;
+    margin-left: 10px;
+    text-align: center;
+}
+.group .right .red_block div{
+    height: 86px;
+    margin-top: 40px;
+    padding-left: 10px;
+    width:65%;
+    float: right;
+    font-family: "Adobe Fan Heiti Std", sans-serif;
+
+    border-left: 2px solid #ffffff;
+}
+.group .right .red_block div span{
+    display: block;
+}
+.group .right .red_block div span:first-child{
+    font-size:21px;
+    display: block;
+    text-transform: uppercase;
+    font-style: italic;
+    height: 1em;
+    line-height: 1em;
+    margin-top: 0.5em;
+}
+.group .right .red_block div span:last-child{
+    font-size:12px;
+    margin-top: 2em;
+    line-height: 1em;
+}
+.group .right .text{
+    float: right;
+    word-break: break-all;
+    width:180px;
+    height: 160px;
+
+    margin-bottom: -10px;
+    font-size: 12px;
+    font-style: italic;
+}
+.group .right .text{
+    color: #515b5b;
+}
+.group .right .text p{
+    padding: 10px;
+}
+.group .right .text p:before{
+    content: '“';
+    color: palevioletred;
+    font-weight: bold;
+    font-size: 72px;
+    margin: 0 !important;
+    float: left;
+    height: 1rem;
+    width: 1.5rem;
+    border: 1px solid;
+}
+.group .right .text p:after{
+    content: '”';
+    font-size: 72px;
+    color: palevioletred;
+    font-weight: bold;
+    float: right;
+    height: 1rem;
+    width: 1.5rem;
+    border: 1px solid;
+}
+.group .right article:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+footer{
+    margin-top: 20px !important;
+    border-top: 1px solid #938e8c;
+    text-align: right;
+    color:#d45d5c;
+    font-size:12px;
+}
