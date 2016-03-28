@@ -8,23 +8,20 @@
     overflow: hidden;
 }
 .top{
-    width:100px;
-    height:100px;
+    width:60px;
+    height:60px;
     background-color: #fc0;
-    border-radius: 9999px;
-
+    border-radius:0 0 100% 0;
     position: absolute;
-    top: -50px;
-    left:-50px;
 }
 
 .bottom{
-    width:100px;
-    height:100px;
+    width:60px;
+    height:60px;
     background-color: #fc0;
-    border-radius: 9999px;
+    border-radius:100% 0 0 0;
 
     position: absolute;
-    bottom: -50px;
-    right: -50px;
+    bottom: 0;
+    right: 0;
 }
