@@ -1,0 +1,683 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei', sans-serif;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */    font-weight: 300;
+}
+*,*:before,*:after{
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+button{
+    cursor: pointer;
+}
+.c-pull-right{
+    float: right;
+}
+.c-pull-left{
+    float:left;
+}
+.c-pull-right:before,.c-pull-left:before,
+.c-pull-right:after,.c-pull-left:after{
+    content: '';
+    display: table;
+}
+.c-pull-right:after,.c-pull-left:after{
+    clear: both;
+}
+
+.c-container{
+    width:1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+.c-container:before,
+.c-container:after{
+    content:'';
+    display: table;
+}
+.c-container:after{
+    clear: both;
+}
+.c-nav{
+    padding: 1px;
+    list-style: none;
+    /*border-bottom: 1px solid #ddd;*/
+}
+.c-nav:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.c-top-band{
+    float: left;
+    font-size:1.2rem;
+}
+.c-top-band > a {
+    text-decoration: none;
+    background: url("../images/book.png") no-repeat;
+    background-size: contain;
+    display: block;
+    width:10rem;
+    height: 2rem;
+    line-height: 2rem;
+    padding-left: 3rem;
+    margin-left: 4rem;
+    margin-top:1rem;
+}
+.c-top-band > a,
+.c-top-band > a:hover,
+.c-top-band > a:focus{
+    color: #231815;
+}
+
+.c-nav-tabs{
+    padding: 0;
+    margin: 0;
+}
+.c-nav-tabs:before,.c-nav-tabs:after{
+    content: '';
+    display: table;
+}
+.c-nav-tabs:after{
+    clear: both;
+}
+.c-nav-tabs >li{
+    position:relative;
+    display: inline-block;
+    height: 55px;
+    line-height: 55px;
+}
+.c-nav-tabs > li + li{
+    margin-top:0;
+    margin-left: 5px;
+}
+.c-nav-tabs > li > a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 0 0.5rem;
+    height: 95%;
+}
+.c-nav-tabs > li:last-child{
+    margin-left: 3rem;
+}
+.c-nav-tabs > li > a,
+.c-nav-tabs > li > a:focus {
+    color: #929292;
+}
+.c-nav-tabs .active > a,.c-nav-tabs > li > a:hover{
+    color: #e7504d;
+    border-bottom: 3px solid #e7504d;
+}
+.c-banner{
+    padding-top: 1px;
+    height: 691px;
+    background:url("../images/banner.jpg") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    color: #ffffff;
+}
+.c-banner > .text {
+    margin:200px 50px;
+}
+.c-banner > .text > h2 {
+    font-size: 72px;
+    margin: 0;
+    font-weight: 300;
+}
+.c-banner > .text > p{
+    font-size:22px;
+    width:350px;
+}
+.c-banner > .text button{
+    margin-top: 30px;
+    background: #e7504d;
+    width:350px;
+    padding:10px;
+    border: none;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+/*css图片*/
+.login{
+    background-image: url("../images/login.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position:left 45%;
+    padding-left: 0.5rem;
+    color:#e7504d;
+}
+.login a{
+    color: #e7504d!important;
+}
+.login a:hover{
+    border-bottom: none!important;
+}
+
+.c-four ul{
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+    padding: 1px;
+}
+.c-four ul:after{
+
+}
+.c-four .c-img-are{
+    background: url("../images/are.png") no-repeat top;
+}
+.c-four .c-img-flg{
+    background: url("../images/flg.png") no-repeat top;
+}
+.c-four .c-img-grid{
+    background: url("../images/grid.png") no-repeat top;
+}
+.c-four .c-img-hua{
+    background: url("../images/hua.png") no-repeat top;
+}
+.c-four li{
+    display: inline-block;
+    width:20%;
+    padding-left:30px;
+    padding-right: 30px;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    position:relative;
+}
+.c-four li span{
+    display: block;
+    width:50px;
+    height: 50px;
+    margin: 0 auto;
+    position: absolute;
+    top: -80px;
+    left: 38%;
+}
+.c-four li + li {
+    border-left: 1px solid #e7504d;
+}
+.about_new_world{
+    height: 300px;
+    line-height: 300px;
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 1px;
+}
+.about_new_world p{
+    background: url("../images/book.png") no-repeat center top;
+    margin-top:50px;
+    line-height: 50px;
+    padding-top: 150px;
+    color:#919191;
+    font-size: 60px;
+}
+.find-global-city{
+    background: url("../images/ditu.jpg") no-repeat transparent;
+    background-size: contain;
+    height: 338px;
+    padding: 1px;
+    text-align: center;
+    color:white;
+}
+.find-global-city .bg{
+    background: rgba(170, 52, 51, 0.2) no-repeat scroll;
+    background-position: top!important;
+    height: inherit;
+    width: inherit;
+}
+.find-global-city p{
+    margin-top: 0;
+    padding-top: 50px;
+    font-size:22px;
+}
+.find-global-city p:after{
+    content: '';
+    display: block;
+    width:30px;
+    border-bottom: 2px solid white;
+    margin: 0 auto;
+}
+.find-global-city span{
+    font-size: 13px;
+}
+.find-global-city div form{
+    margin-top: 30px;
+}
+.find-global-city div form .select{
+    width:250px;
+    height: 40px;
+    margin-right: 20px;
+    display: inline-block;
+    background: #ffffff url("../images/select.jpg") no-repeat scroll;
+    background-position: 96% center;
+}
+.find-global-city div form .select >select{
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    border: none;
+    color: #8c8b84;
+    font-size: 15px;
+
+    /*/!*清除select的默认样式*!/*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+
+    scrollbar-shadow-color: #ccc;
+}
+.find-global-city div form .select >select:focus{
+    border:1px solid #e7504d;
+}
+.find-global-city div form select option{
+    display: block !important;
+    background: #ded0d0;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    padding-left: 50px;
+    font-size: 15px;
+}
+.find-global-city div form select option:hover{
+    background-color: #e7504d!important;
+    padding-left: 0;
+    cursor:pointer;
+}
+.find-global-city div form select option:hover:before{
+    content: '✓';
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+}
+.find-global-city div form button{
+    width:250px;
+    height: 40px;
+    border: none;
+    background: #e7504d;
+    color: #ffffff;;
+    font-size: 15px;
+    letter-spacing: 10px;
+}
+.photos{
+    margin-top: 50px;
+    text-align: center;
+}
+.photos figure{
+    display: inline-block;
+    overflow: hidden;
+    width: 220px;
+    margin:auto 20px;
+    padding: 0;
+
+}
+.photos figure img {
+    max-height: 100%;
+    max-width: 90%;
+    margin:5px auto 5px auto;
+    padding: 5px;
+    border: 1px solid #ded0d0;
+}
+.photos figure figcaption h4{
+    margin: 0 auto;
+    font-size:15px;
+    font-weight: 300;
+}
+.photos figure figcaption h4.top{
+    /*letter-spacing: 2rem;*/
+    text-align: justify;
+    width:80%;
+    height: 30px;
+}
+.photos figure figcaption h4.top > span{
+    display: inline-block /* Opera */;
+    padding-left: 100%;
+}
+.photos figure figcaption h5{
+    margin: 0 auto;
+    font-size:12px;
+    padding:10px auto 20px auto;
+    color: #a2a2a2;
+    font-weight: 300;
+}
+.new_world{
+    height: 565px;
+    margin:80px 0 0;
+}
+.new_world .active,.new_world .list{
+    display: inline-block;
+    overflow: hidden;
+}
+.new_world .active{
+    width:60%;
+    background: url("../images/newword.jpg") no-repeat;
+    height: inherit;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+.new_world .active:after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    border-top: 1.5rem solid transparent;
+    border-bottom:1.5rem solid transparent;
+    border-right: 1.5rem solid #ffffff;
+}
+.new_world .active p{
+    font-size:50px;
+    margin-top:100px;
+}
+.new_world .active .time{
+    font-size: 180px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.new_world .active span,.new_world .active time{
+    display: block;
+    font-size:22px;
+    margin:10px;
+}
+.new_world .list{
+    width: 39.5%;
+    height: inherit;
+}
+.new_world .list .text{
+    margin:8rem auto;
+    width:80%;
+    text-align: center;
+    position: relative;
+}
+.new_world .list .text h3{
+    text-align: center;
+    font-size:1.5rem;
+    font-weight: 300 !important;
+    letter-spacing: 0.3rem;
+}
+.new_world .list .text h3 span{
+    color: #e7504d;
+}
+.new_world .list .text p{
+    font-size:0.8rem;
+    color:#aaaaaa;
+    line-height: 1.5rem;
+    text-align: left;
+}
+.new_world .list .text button{
+    border:1px solid #e7504d;
+    background: #ffffff;
+    padding:0.3rem 1rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color:#e7504d;
+    cursor: pointer;
+}
+.new_world .list .text ul{
+    padding: 0;
+    margin-top:2rem;
+}
+.new_world .list .text ul li{
+    display: inline-block;
+    border: 1px solid #938e8c;
+    width:0.6rem;
+    height: 0.6rem;;
+    border-radius: 50%;
+    text-indent: 999rem;
+    cursor: pointer;
+}
+.new_world .list .text ul li.alive{
+    background-color: #938e8c;
+}
+.new_time_now{
+    overflow: hidden;
+    margin-top:0;
+}
+.new_time_now div{
+    width:33.3%;
+    height: 515px;
+    float: left;
+    text-align: center;
+    font-size:1.5rem;
+    font-weight: 100;
+    padding-top: 10rem;
+}
+.new_time_now div h3,.new_time_now div h4{
+    margin:0.3rem auto;
+    font-weight: 300 !important;
+}
+.new_time_now div h4:after{
+    content: '';
+    display: block;
+    width:2.5rem;
+    border-bottom: 0.1rem solid;
+    margin: 0.8rem auto;
+}
+.new_time_now div a{
+    display: block;
+    width:10rem;
+    margin:2rem auto;
+    border:1px solid;
+    font-size:1rem;
+    padding:0.5rem 1.5rem;
+    text-decoration: none;
+    color: #e7504d;
+}
+.new_time_now > div:first-child{
+    background-color: #e7504d;
+    color: #ffffff;
+}
+.new_time_now > div:first-child a{
+    color: #ffffff;
+}
+.new_time_now > div:last-child{
+    background: url("../images/girl.jpg") no-repeat;
+}
+.new_time_now > div:last-child >span{
+    display: block;
+    margin-top: -150px;
+    padding-top: 0;
+    height: inherit;
+    widows: inherit;
+    background-color: rgba(0,0,0,0.2);
+}
+.opensource{
+    height: 260px;
+    text-align: center;
+}
+.opensource div{
+    width:50%;
+    margin:5rem auto;
+}
+.opensource div h3{
+    font-size: 1.5rem;
+}
+.opensource div h3:after{
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid #e7504d;
+    width:2rem;
+    margin:0.5rem auto;
+}
+.opensource div span{
+    font-size: 0.9rem;
+    color: #938e8c;
+}
+.connect{
+    overflow: hidden;
+    width:80%;
+    margin:0 auto 8rem;
+}
+.connect > div{
+    float: left;
+}
+.connect .info{
+    width:30%;
+}
+.connect .info >div{
+    width:90%;
+    margin:0 auto;
+}
+.connect .info >div >h4{
+    margin-top:0;
+    color: #555555;
+}
+.connect .info >div > p{
+    font-size:0.8rem;
+    line-height: 1.2rem;
+    color: #676767;
+}
+.connect .info >div > a{
+    display: block;
+    text-align: right;
+    font-size: 0.7rem;
+    color: #676767;
+    position: relative;
+    text-decoration: none;
+}
+.connect .info >div > a:before{
+    content: 'ˇ';
+    margin-right: 0.3rem;
+    font-size: 2rem;
+    /*-webkit-transform: rotate(180deg);*/
+    /*-moz-transform: rotate(180deg);*/
+    /*-ms-transform: rotate(180deg);*/
+    /*-o-transform: rotate(180deg);*/
+    /*transform: rotate(180deg);*/
+    position: absolute;
+    top:0.1rem;
+    right: 1.5rem;
+    font-weight: 300;
+}
+.connect .table{
+    width:70%;
+    text-align: center;
+}
+.connect .table form{
+    width:95%;
+    margin:0 auto;
+}
+.connect .table .line{
+    width:100%;
+    overflow: hidden;
+}
+.connect .table .line>div{
+    float: left;
+    width:50%;
+}
+.connect .table .line >div >input{
+    width:95%;
+    height: 3rem;
+    padding:0.5rem 1rem;
+}
+.connect .table .line div:first-child{
+    text-align: left;
+}
+.connect .table .line div:last-child{
+    text-align: right;
+}
+.connect .table form > textarea{
+    width:100%;
+    padding:1rem;
+}
+.connect .table form > button{
+    display: block;
+    width: 100%;
+    height:3rem;
+    font-size: 1rem;
+    color: #333333;
+    letter-spacing: 0.2rem;
+}
+.connect .table .line,.connect .table form > textarea,.connect .table form > button{
+    margin-bottom: 1rem;
+}
+.connect .table .line >div >input,.connect .table form > textarea,.connect .table form > button{
+    background-color: #eeeeee;
+    border: none;
+}
+.connect_next{
+    background: #32353e;
+    color: #eeeeee;
+    text-align: center;
+}
+.connect_next div{
+    width:65%;
+    margin: 0 auto;
+    padding:5rem;
+}
+.connect_next div p{
+    font-size:0.9rem;
+}
+.connect_next div form{
+    position: relative;
+    width:89%;
+    padding: 2rem;
+}
+.connect_next div form  button,.connect_next div form  input{
+    margin: 0!important;
+    padding: 0!important;
+    border:none;
+    height:3rem !important;
+    font-size:1rem;
+}
+.connect_next div form input{
+    width:30rem;
+    padding: 1rem!important;
+}
+.connect_next div form > button{
+    width:8rem;
+    position: absolute;
+    right: 0;
+    letter-spacing: 0.2rem;
+    background-color: #938e8c;
+    color:#ffffff;
+}
+.connect_next div ul{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+.connect_next div ul li{
+    display: inline-block;
+    width:2rem;
+    height:2rem;
+    padding:1rem;
+    list-style: none;
+    text-indent: 9999rem;
+    margin:1rem;
+    cursor: pointer;
+}
+.connect_next div ul li.qq{
+    background: url("../images/qq.png") no-repeat;
+}
+.connect_next div ul li.wb{
+    background: url("../images/weibo.png") no-repeat;
+}
+.connect_next div ul li.tw{
+    background: url("../images/twitter.png") no-repeat;
+}
+.connect_next div ul li.gl{
+    background: url("../images/global.png") no-repeat;
+}
+footer{
+    background:#303039;
+    color: #eeeeee;
+    height: 2rem;
+    line-height: 2rem;
+    font-size:0.8rem;
+}
+footer div a{
+    float: right;
+    text-decoration: none;
+    color: #eeeeee;
+}
