@@ -17,14 +17,6 @@ html,body{
     max-width: 1200px;
 }
 
-/*-- our cleafix hack -- */
-.row:before,
-.row:after {
-    content:"";
-    display: table ;
-    clear:both;
-}
-
 [class*='col-'] {
     float: left;
     min-height: 1px;
