@@ -1,0 +1,79 @@
+$page-width:1200px;
+$page-width-percentage:100%;
+$page-background-color: #ffffff;
+$sub-background-color:#FFC2C2;
+$sub-height:50px;
+%init{
+  margin:0;
+  padding:0;
+}
+%box-sizing{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin generateGrid($flag){
+  @if $flag{
+    @for $i from 1 to 12{
+      .col-md-#{$i}{
+        width:(100% / 12 * $i);
+      }
+    }
+  }@else{
+    @for $i from 1 to 12{
+      .col-sm-#{$i}{
+        width:(100%/12*$i);
+      }
+    }
+  }
+}
+
+html,body{
+    @extend %init;
+}
+*,*:before,*:after{
+    @extend %box-sizing;
+}
+
+.grid-container{
+    width: $page-width-percentage;
+    max-width: $page-width;
+}
+
+/*-- our cleafix hack -- */
+.row{
+  &:before,&:after{
+    content:"";
+    display: table ;
+    clear:both;
+  }
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    width: 16.66%;
+    /*-- our gutter -- */
+    padding: 12px;
+}
+
+@media all and (min-width : 768px){
+    @include generateGrid(true);
+}
+@media all and (max-width : 768px){
+    @include generateGrid(false);
+}
+.outline, .outline *{
+/*outline: 1px solid #F6A1A1;*/
+}
+
+/*-- some extra column content styling --*/
+[class*='col-'] > p {
+    background-color: #FFC2C2;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+    height: $sub-height;
+    line-height: $sub-height;
+}
