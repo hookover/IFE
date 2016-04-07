@@ -66,6 +66,7 @@ function renderChart() {
         {
             var d = new Date(indate);
             res_array[weekDay] = (res_array[weekDay]?res_array[weekDay]:0)+aqiSourceData[pageState.nowSelectCity][indate];
+            //因为当天数据只有一条，所以每到星期天的时候，对象数组的序号就+1，得到一共有?周
             if(d.getDay()==0)
             {
                 weekDay++;
@@ -78,12 +79,14 @@ function renderChart() {
         {
             var d = new Date(indate);
             res_array[(d.getMonth()+yearNum)] = (res_array[d.getMonth()]?res_array[d.getMonth()]:0)+aqiSourceData[pageState.nowSelectCity][indate];
+            //把开始的年份放到变量中，如果这个值大于原来的年份，就是第二年
             if(d.getFullYear()>year)
             {
                 year = d.getFullYear();
                 yearNum++;
             }
         }
+        //把重新计算后的数据放入chartData
         chartData[pageState.nowSelectCity]=res_array;
     }
 
@@ -91,6 +94,8 @@ function renderChart() {
     var sourceData = chartData[pageState.nowSelectCity];
 
     var colorContainer=["#99CCCC", "#FFCC99", "#FFCCCC", "#FF9999", "#996699", "#FFCCCC","#009966","#CC99CC","#666699","#336699"];
+
+    //找出数据中最大的值
     pageState.maxValue=0;
     for(var indate in sourceData)
     {
@@ -98,6 +103,7 @@ function renderChart() {
             pageState.maxValue=sourceData[indate]+1;
         }
     }
+    //以最大值为100%作为参照，设置其它柱状图高度百分比
     for(var indate in sourceData)
     {
         dataHtml += '<i style="height: '+(sourceData[indate]/pageState.maxValue)*100+'%;' +
@@ -106,18 +112,18 @@ function renderChart() {
     }
     dataHtml+='<\/div>';
 
-    /*  写入数据  */
+    /*  输出数据到html  */
     var chartHTMLContainer = window.document.getElementsByClassName('aqi-chart-wrap')[0];
     chartHTMLContainer.innerHTML = dataHtml;
 
-    //添加事件
+    //添加鼠标经过柱状图事件
     window.document.getElementsByClassName('aqi-chart-wrap')[0].addEventListener('mouseover',function(e){
         var htmlContainer = window.document.getElementById("mouseover");
         if(typeof(e.target.dataset.value) != "undefined")
         {
-            //var value =(e.target.dataset.value).match(/:\d+/)[0].match(/\d+/);
-            var value =(e.target.dataset.value).match(/\b[\d]+$/);
+            //处理过后的数据index可能是日期2016-01-01也可能是数字0、1、2、3...
 
+            var value =(e.target.dataset.value).match(/\b[\d]+$/);
             var weekdOrMonth = (e.target.dataset.value).match(/\d+/);
             var year = (e.target.dataset.value).match(/\d{1,4}-\d{1,2}-\d{1,2}/);
             var res=year?year:++weekdOrMonth;
@@ -160,6 +166,7 @@ function graTimeChange() {
         {
             pageState.nowGraTime = time_list[i].value;
             chartData[pageState.nowSelectCity]=randomBuildData(Math.random()*100);
+
             // 调用图表渲染函数
             renderChart();
         }
@@ -224,6 +231,7 @@ function initAqiChartData() {
     // 将原始的源数据处理成图表需要的数据格式
     // 处理好的数据存到 chartData 中
 
+    //数据处理放到renderChart中了，因为initAqiChartData只执行一次，不能复用
     chartData[pageState.nowSelectCity] = aqiSourceData[pageState.nowSelectCity];
     // 显示数据到网页
     renderChart();
